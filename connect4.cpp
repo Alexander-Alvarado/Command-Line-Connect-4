@@ -162,7 +162,7 @@ bool check_win_diagonal_up(const char* grid[row][column], bool black_turn) {
 }
 
 bool check_win_diagonal_down(const char* grid[row][column], bool black_turn) {
-	if (black_turn == true) {
+	if (black_turn) {
 		for (int j = 0; j <= 6; j++) {
 			for (int i = 0; i <= 5; i++) {
 				if (grid[i][j] == " b " && grid[i + 1][j + 1] == " b " && grid[i + 2][j + 2] == " b " && grid[i + 3][j + 3] == " b ") {
@@ -174,7 +174,7 @@ bool check_win_diagonal_down(const char* grid[row][column], bool black_turn) {
 
 		}
 	}
-	else if (black_turn == false) {
+	else if (!black_turn) {
 		for (int j = 0; j <= 6; j++) {
 			for (int i = 0; i <= 5; i++) {
 				if (grid[i][j] == " r " && grid[i + 1][j + 1] == " r " && grid[i + 2][j + 2] == " r " && grid[i + 3][j + 3] == " r ") {
