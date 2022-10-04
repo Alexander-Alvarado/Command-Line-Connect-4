@@ -1,4 +1,3 @@
-//#include "pch.h"
 #include <iostream>
 #include <string>
 using namespace std;
@@ -16,7 +15,8 @@ void init_grid(const char* grid[row][column]) {
 	}
 }
 
-void player_turn(bool black_turn) {
+void player_turn(bool black_turn) 
+{
 	if (black_turn == false) {
 		cout << "------Red Turn------"<<endl;
 	}
@@ -34,7 +34,8 @@ int col_chooser(bool black_turn, int col) {
 		if (col > 7 || col < 1){
 			cout << "Please Enter A Column Number Between 1 And 7." << endl;
 		}
-	} while (col > 7 || col < 1);
+	} 
+	while (col > 7 || col < 1);
 	
 	return col;
 }
