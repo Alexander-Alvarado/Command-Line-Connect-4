@@ -206,20 +206,20 @@ int main()
 		update_grid(grid, black_turn, col);
 		print_grid(grid);
 		game_over = check_win_Vertical(grid, black_turn);
-		if (game_over == true) {
+		if (game_over) {
 			break;
 		}
 		game_over = check_win_horizontal(grid, black_turn);
-		if (game_over == true) {
+		if (game_over) {
 			break;
 		}
 		game_over = check_win_diagonal_up(grid, black_turn);
-		if (game_over == true) {
+		if (game_over) {
 			break;
 		}
 		game_over = check_win_diagonal_down(grid, black_turn);
 		black_turn = next_turn(black_turn);
-	} while (game_over == false);
+	} while (!game_over);
 
 
 	return 0;
